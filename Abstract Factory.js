@@ -37,5 +37,8 @@ const listLeng = ['uk', 'en'];
 s.setfilm(listFilm[prompt('Выберете фильм:\n'+listFilm.map((a,b) => b + " | " + a).join('\n'))]);
 s.setSound(listLeng[prompt('Укажите язык озвучки: \n'+listLeng.map((a,b) => b + " | " + a).join('\n'))]);
 s.getAll();
-s.setSound(listLeng[prompt('Укажите язык озвучки: \n'+listLeng.map((a,b) => b + " | " + a).join('\n'))]);
+if(confirm('Смена языка озвучки == Ok\nСмена языка субтитров == Cancel'))
+	s.setSound(listLeng[prompt('Укажите язык озвучки: \n'+listLeng.map((a,b) => b + " | " + a).join('\n'))]);
+else
+	s.setSound(listLeng[prompt('Укажите язык cубтитров: \n'+listLeng.map((a,b) => b + " | " + a).join('\n'))]);	
 s.getAll();
